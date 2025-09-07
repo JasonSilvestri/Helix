@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Title>Helix{} – A Universal AI Design Pattern for Dual-Partner Incremental Redesign</Title>
+    <Description>Helix{} – A Universal AI Design Pattern for Dual-Partner Incremental Redesign (v1)</Description>
+    <Copyright>Copyright © 2025 Helix{} — All Rights Reserved by Jason Silvestri &amp; Mark Silvestri</Copyright>
+    <PackageProjectUrl>https://github.com/JasonSilvestri/Helix</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/JasonSilvestri/Helix.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>LLM; AI; ChatGPT</PackageTags>
+    <PackageReleaseNotes>Helix{} is a technology-agnostic design pattern that fuses a language partner (Partner-L) with quantitative engines (Partner-Q) under strict, machine-checkable contracts. The universal loop is: Envelope → Proposal → Results → Decision.</PackageReleaseNotes>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.8" />
+  </ItemGroup>
+
+</Project>

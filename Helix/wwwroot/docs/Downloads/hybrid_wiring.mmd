@@ -1,0 +1,11 @@
+flowchart TD
+    HL[Human Lead<br/>Goals • Constraints • Sign-off] ---|1) goals/constraints| P[PaLMs{} Hub<br/>(Orchestrator • Registry • Gates • Provenance)]
+    P ---|Artifacts| A[Artifact Store<br/>CAD/Mesh/BOM • Logs • Hashes • Results]
+    P -->|2a) prompt/spec| L[Partner‑L (LLM)<br/>Proposals • DOE Plans • Rationale]
+    P -->|2b) baseline_ref/artifacts| L
+    L -->|3) proposal.json<br/>(deltas • DOE • rationale)| Q[Partner‑Q Adapters<br/>(CFD/FEA/Controls/Cost/Optimizers)]
+    Q -->|4) results.json<br/>(metrics • CI • violations)| L
+    Q -->|4b) results bundle| A
+    L -->|5) recommendation| G[PaLMs{} Gates<br/>Numeric checks • Constraint guards • Dual sign‑off]
+    G -->|6) promote vN→vN+1| P
+    P -->|New Frozen Baseline| P

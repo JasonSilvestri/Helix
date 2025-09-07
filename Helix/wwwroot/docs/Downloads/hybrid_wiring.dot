@@ -1,0 +1,21 @@
+digraph HybridDualPartner {
+  rankdir=LR;
+  node [shape=box, fontsize=10];
+
+  HL [label="Human Lead\nGoals • Constraints • Sign-off"];
+  P  [label="PaLMs{} Hub\n(Orchestrator • Registry • Gates • Provenance)"];
+  A  [label="Artifact Store\nCAD/Mesh/BOM • Logs • Hashes • Results"];
+  L  [label="Partner‑L (LLM)\nProposals • DOE Plans • Rationale"];
+  Q  [label="Partner‑Q Adapters\nCFD/FEA/Controls/Cost/Optimizers"];
+  G  [label="PaLMs{} Gates\nNumeric checks • Constraint guards • Dual sign-off"];
+
+  HL -> P [label="1) goals/constraints"];
+  P  -> A [label="Artifacts"];
+  P  -> L [label="2a) prompt/spec"];
+  P  -> L [label="2b) baseline_ref/artifacts"];
+  L  -> Q [label="3) proposal.json\n(deltas • DOE • rationale)"];
+  Q  -> L [label="4) results.json\n(metrics • CI • violations)"];
+  Q  -> A [label="4b) results bundle"];
+  L  -> G [label="5) recommendation"];
+  G  -> P [label="6) promote vN→vN+1"];
+}
