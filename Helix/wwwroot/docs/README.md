@@ -418,7 +418,7 @@ This ensures clarity: **partners stay invariant roles, while humans and services
 **LLM Proposal**
 ```json
 {
-  "proposal_id": "prop-2025-09-06-001",
+  "proposal_id": "668f34e6-9d48-46a9-8e06-11ec6e33d9f3",
   "baseline_ref": "car-aero-v7.3",
   "deltas": [
     {
@@ -436,7 +436,7 @@ This ensures clarity: **partners stay invariant roles, while humans and services
 **Quant Results**
 ```json
 {
-  "proposal_id": "prop-2025-09-06-001",
+  "proposal_id": "668f34e6-9d48-46a9-8e06-11ec6e33d9f3",
   "runs": [
     {
       "delta_name": "rear-fairing-extension",
@@ -455,7 +455,7 @@ This ensures clarity: **partners stay invariant roles, while humans and services
 **Decision**
 ```json
 {
-  "decision_id": "dec-2025-09-06-a",
+  "decision_id": "b5bb484a-577c-4ea3-8dd2-4508ecc73e9a",
   "baseline_ref": "car-aero-v7.3",
   "accepted_deltas": ["rear-fairing-extension"],
   "justification": "Drag −1.35% within constraints; risk acceptable.",
@@ -671,7 +671,7 @@ Use this to frame *any* task (LLM-only, Quant-only, or hybrid). Paste it at the 
 
 ```json
 {
-  "envelope_id": "task-2025-09-06-001",
+  "envelope_id": "5af44e1d-e597-4ddd-bda3-2ff29166f977",
   "created_at": "2025-09-06T22:41:00Z",
   "owner": "Jason",
   "context": {
@@ -728,8 +728,8 @@ Proposals are *small, justified deltas* from the frozen baseline, with expected 
 
 ```json
 {
-  "proposal_id": "prop-2025-09-06-001",
-  "envelope_ref": "task-2025-09-06-001",
+  "proposal_id": "668f34e6-9d48-46a9-8e06-11ec6e33d9f3",
+  "envelope_ref": "5af44e1d-e597-4ddd-bda3-2ff29166f977",
   "baseline_ref": "car-aero-v7.3",
   "deltas": [
     {
@@ -761,7 +761,7 @@ Results include scored metrics, uncertainty, violations, and environment details
 
 ```json
 {
-  "proposal_id": "prop-2025-09-06-001",
+  "proposal_id": "668f34e6-9d48-46a9-8e06-11ec6e33d9f3",
   "runs": [
     {
       "delta_name": "rear-fairing-extension",
@@ -794,8 +794,8 @@ Decision records capture accepted/rejected deltas, justification, and dual sign-
 
 ```json
 {
-  "decision_id": "dec-2025-09-06-a",
-  "envelope_ref": "task-2025-09-06-001",
+  "decision_id": "b5bb484a-577c-4ea3-8dd2-4508ecc73e9a",
+  "envelope_ref": "5af44e1d-e597-4ddd-bda3-2ff29166f977",
   "accepted_deltas": ["rear-fairing-extension"],
   "rejected_deltas": [],
   "justification": "Drag −1.35% within constraints; risk acceptable.",
@@ -818,7 +818,7 @@ A simple, declarative gate policy that defines must-pass constraints
 
 ```json
 {
-  "policy_id": "gate-policy-1.0",
+  "policy_id": "2486101f-e2ae-4198-9a38-d9df73fe4c89",
   "must_pass": [
     "metrics.drag_pct <= -1.0",
     "metrics.mass_pct <= 0.5",
@@ -1414,7 +1414,7 @@ export class GateCheck {
 
 # sample/envelope.json
 {
-  "envelope_id": "task-2025-09-06-001",
+  "envelope_id": "5af44e1d-e597-4ddd-bda3-2ff29166f977",
   "created_at": "2025-09-06T22:41:00Z",
   "owner": "Jason",
   "context": {
@@ -1457,7 +1457,7 @@ export class GateCheck {
 
 # sample/gate-policy.json
 {
-  "policy_id": "gate-policy-1.0",
+  "policy_id": "2486101f-e2ae-4198-9a38-d9df73fe4c89",
   "must_pass": [
     "metrics.drag_pct <= -1.0",
     "metrics.mass_pct <= 0.5",
@@ -1469,8 +1469,8 @@ export class GateCheck {
 
 # sample/proposals/prop-001.json
 {
-  "proposal_id": "prop-2025-09-06-001",
-  "envelope_ref": "task-2025-09-06-001",
+  "proposal_id": "668f34e6-9d48-46a9-8e06-11ec6e33d9f3",
+  "envelope_ref": "5af44e1d-e597-4ddd-bda3-2ff29166f977",
   "baseline_ref": "car-aero-v7.3",
   "deltas": [
     {
@@ -1488,7 +1488,7 @@ export class GateCheck {
 
 # sample/results/prop-001.results.json
 {
-  "proposal_id": "prop-2025-09-06-001",
+  "proposal_id": "668f34e6-9d48-46a9-8e06-11ec6e33d9f3",
   "runs": [
     {
       "delta_name": "rear-fairing-extension",
@@ -1512,8 +1512,8 @@ export class GateCheck {
 
 # sample/decisions/dec-001.json
 {
-  "decision_id": "dec-2025-09-06-a",
-  "envelope_ref": "task-2025-09-06-001",
+  "decision_id": "b5bb484a-577c-4ea3-8dd2-4508ecc73e9a",
+  "envelope_ref": "5af44e1d-e597-4ddd-bda3-2ff29166f977",
   "accepted_deltas": ["rear-fairing-extension"],
   "rejected_deltas": [],
   "justification": "Drag −1.35% within constraints; risk acceptable.",

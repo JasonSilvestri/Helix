@@ -253,6 +253,7 @@ Helix/
       └─ scripts/
          └─ lint-docs.ts             # Glossary drift checker (CI-friendly)
 
+
 ```
 
 [`⇧ Back to Top`](#table-of-contents)  
@@ -300,7 +301,7 @@ Every message references the envelope by ID.
 
 ```json
 {
-  "envelope_id": "task-2025-09-06-001",
+  "envelope_id": "5af44e1d-e597-4ddd-bda3-2ff29166f977",
   "created_at": "2025-09-06T22:41:00Z",
   "owner": "Jason",
   "context": {
@@ -358,8 +359,8 @@ Proposal with one or more deltas, DOE plan, and rationale.
 
 ```json
 {
-  "proposal_id": "prop-2025-09-06-001",
-  "envelope_ref": "task-2025-09-06-001",
+  "proposal_id": "668f34e6-9d48-46a9-8e06-11ec6e33d9f3",
+  "envelope_ref": "5af44e1d-e597-4ddd-bda3-2ff29166f977",
   "baseline_ref": "car-aero-v7.3",
   "deltas": [
     {
@@ -387,7 +388,7 @@ Results bundle (one or more runs) with metrics, uncertainties, violations, and e
 
 ```json
 {
-  "proposal_id": "prop-2025-09-06-001",
+  "proposal_id": "668f34e6-9d48-46a9-8e06-11ec6e33d9f3",
   "runs": [
     {
       "delta_name": "rear-fairing-extension",
@@ -420,8 +421,8 @@ Decision record with accepted/rejected deltas, justification, dual sign-off, and
 
 ```json
 {
-  "decision_id": "dec-2025-09-06-a",
-  "envelope_ref": "task-2025-09-06-001",
+  "decision_id": "b5bb484a-577c-4ea3-8dd2-4508ecc73e9a",
+  "envelope_ref": "5af44e1d-e597-4ddd-bda3-2ff29166f977",
   "accepted_deltas": ["rear-fairing-extension"],
   "rejected_deltas": [],
   "justification": "Drag −1.35% within constraints; risk acceptable.",
@@ -445,7 +446,7 @@ Gate policy defining pass/block rules.
 
 ```json
 {
-  "policy_id": "gate-policy-1.0",
+  "policy_id": "2486101f-e2ae-4198-9a38-d9df73fe4c89",
   "must_pass": [
     "metrics.drag_pct <= -1.0",
     "metrics.mass_pct <= 0.5",
@@ -479,6 +480,42 @@ Paste this **Seed Header** at the top of any ChatGPT thread/repo to lock alignme
 
 
 [`⇧ Back to Top`](#table-of-contents)  
+
+
+---
+
+
+> (Identical to what we drafted—placing it in `wwwroot/docs/` makes it easy to fetch in CI or view in a browser.)
+
+---
+
+## 🧪 Node Utilities (unchanged, just relocated)
+
+Place the `helix-hub` Node project under `tools/helix-hub/` exactly as we authored. It provides:
+
+* JSON Schema validation
+* Gate policy evaluation
+* `lint-docs.ts` glossary checker
+
+Keeping it in `tools/` avoids mixing build chains and keeps the .NET web app lean.
+
+---
+
+## 🧭 What belongs in the Envelope vs. Cold-Start?
+
+**Cold-Start (Seed Header)**
+
+* Purpose: *Align a chat session immediately.*
+* Content: `version`, `project`, capability flags, deterministic settings (UUID namespace, hash), preferred outputs (contract filenames).
+* Lifetime: short; paste at chat start. Do **not** store in production task records.
+
+**Task Envelope (Primary)**
+
+* Purpose: *Single source of truth per task.*
+* Content: `context` (goal/constraints/success metrics), `baseline` (artifact hashes/URIs), `policies` (gate policy path, dual-signoff flags), `partners` (L/Q declarations), **`identities`** (humans/services), **`authz`** (who can propose/score/sign/override), provenance hashes.
+* Lifetime: persistent artifact of the task. Versioned and archived. Travels with proposals/results/decisions.
+
+That split keeps **session bootstrap** separate from **governed work**—exactly what we want for clarity and replay.
 
 
 ---
@@ -571,7 +608,7 @@ Helix{} v1 is **ChatGPT-native by design**, authored and proven in collaboration
 ## Task Envelope (universal spine)
 ```json
 {
-  "envelope_id": "task-2025-09-06-001",
+  "envelope_id": "5af44e1d-e597-4ddd-bda3-2ff29166f977",
   "created_at": "2025-09-06T22:41:00Z",
   "owner": "Jason",
   "context": {
@@ -621,8 +658,8 @@ Helix{} v1 is **ChatGPT-native by design**, authored and proven in collaboration
 ### Proposal (Partner-L → Partner-Q)
 ```json
 {
-  "proposal_id": "prop-2025-09-06-001",
-  "envelope_ref": "task-2025-09-06-001",
+  "proposal_id": "668f34e6-9d48-46a9-8e06-11ec6e33d9f3",
+  "envelope_ref": "5af44e1d-e597-4ddd-bda3-2ff29166f977",
   "baseline_ref": "car-aero-v7.3",
   "deltas": [
     {
@@ -647,7 +684,7 @@ Helix{} v1 is **ChatGPT-native by design**, authored and proven in collaboration
 ### Results (Partner-Q → Partner-L / Envelope)
 ```json
 {
-  "proposal_id": "prop-2025-09-06-001",
+  "proposal_id": "668f34e6-9d48-46a9-8e06-11ec6e33d9f3",
   "runs": [
     {
       "delta_name": "rear-fairing-extension",
@@ -673,8 +710,8 @@ Helix{} v1 is **ChatGPT-native by design**, authored and proven in collaboration
 ### Decision (Helix{} Gate + Dual sign-off)
 ```json
 {
-  "decision_id": "dec-2025-09-06-a",
-  "envelope_ref": "task-2025-09-06-001",
+  "decision_id": "b5bb484a-577c-4ea3-8dd2-4508ecc73e9a",
+  "envelope_ref": "5af44e1d-e597-4ddd-bda3-2ff29166f977",
   "accepted_deltas": ["rear-fairing-extension"],
   "rejected_deltas": [],
   "justification": "Drag −1.35% within constraints; risk acceptable.",
@@ -690,7 +727,7 @@ Helix{} v1 is **ChatGPT-native by design**, authored and proven in collaboration
 ### Gate Policy (machine-checkable)
 ```json
 {
-  "policy_id": "gate-policy-1.0",
+  "policy_id": "2486101f-e2ae-4198-9a38-d9df73fe4c89",
   "must_pass": [
     "metrics.drag_pct <= -1.0",
     "metrics.mass_pct <= 0.5",
@@ -852,7 +889,7 @@ Helix{} v1 is **ChatGPT-native** by intent. We prove rigor here first, then cons
 **LLM Proposal**
 ```json
 {
-  "proposal_id": "prop-2025-09-06-001",
+  "proposal_id": "668f34e6-9d48-46a9-8e06-11ec6e33d9f3",
   "baseline_ref": "car-aero-v7.3",
   "deltas": [
     {
@@ -875,7 +912,7 @@ Helix{} v1 is **ChatGPT-native** by intent. We prove rigor here first, then cons
 
 ```json
 {
-  "proposal_id": "prop-2025-09-06-001",
+  "proposal_id": "668f34e6-9d48-46a9-8e06-11ec6e33d9f3",
   "runs": [
     {
       "delta_name": "rear-fairing-extension",
@@ -898,7 +935,7 @@ Helix{} v1 is **ChatGPT-native** by intent. We prove rigor here first, then cons
 **Decision**
 ```json
 {
-  "decision_id": "dec-2025-09-06-a",
+  "decision_id": "b5bb484a-577c-4ea3-8dd2-4508ecc73e9a",
   "baseline_ref": "car-aero-v7.3",
   "accepted_deltas": ["rear-fairing-extension"],
   "justification": "Drag −1.35% within constraints; risk acceptable.",
@@ -1328,7 +1365,7 @@ These samples directly correspond to the schemas shown above.
 
 ```json
 {
-  "envelope_id": "task-2025-09-06-001",
+  "envelope_id": "5af44e1d-e597-4ddd-bda3-2ff29166f977",
   "created_at": "2025-09-06T22:41:00Z",
   "owner": "Jason",
   "context": {
@@ -1379,7 +1416,7 @@ These samples directly correspond to the schemas shown above.
 
 ```json
 {
-  "policy_id": "gate-policy-1.0",
+  "policy_id": "2486101f-e2ae-4198-9a38-d9df73fe4c89",
   "must_pass": [
     "metrics.drag_pct <= -1.0",
     "metrics.mass_pct <= 0.5",
@@ -1401,8 +1438,8 @@ res
 
 ```json
 {
-  "proposal_id": "prop-2025-09-06-001",
-  "envelope_ref": "task-2025-09-06-001",
+  "proposal_id": "668f34e6-9d48-46a9-8e06-11ec6e33d9f3",
+  "envelope_ref": "5af44e1d-e597-4ddd-bda3-2ff29166f977",
   "baseline_ref": "car-aero-v7.3",
   "deltas": [
     {
@@ -1428,7 +1465,7 @@ res
 
 ```json
 {
-  "proposal_id": "prop-2025-09-06-001",
+  "proposal_id": "668f34e6-9d48-46a9-8e06-11ec6e33d9f3",
   "runs": [
     {
       "delta_name": "rear-fairing-extension",
@@ -1460,8 +1497,8 @@ res
 
 ```json
 {
-  "decision_id": "dec-2025-09-06-a",
-  "envelope_ref": "task-2025-09-06-001",
+  "decision_id": "b5bb484a-577c-4ea3-8dd2-4508ecc73e9a",
+  "envelope_ref": "5af44e1d-e597-4ddd-bda3-2ff29166f977",
   "accepted_deltas": ["rear-fairing-extension"],
   "rejected_deltas": [],
   "justification": "Drag −1.35% within constraints; risk acceptable.",

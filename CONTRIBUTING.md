@@ -172,7 +172,7 @@ Every message references the envelope by ID.
 
 ```json
 {
-  "envelope_id": "task-2025-09-06-001",
+  "envelope_id": "5af44e1d-e597-4ddd-bda3-2ff29166f977",
   "created_at": "2025-09-06T22:41:00Z",
   "owner": "Jason",
   "context": {
@@ -230,8 +230,8 @@ Proposal with one or more deltas, DOE plan, and rationale.
 
 ```json
 {
-  "proposal_id": "prop-2025-09-06-001",
-  "envelope_ref": "task-2025-09-06-001",
+  "proposal_id": "668f34e6-9d48-46a9-8e06-11ec6e33d9f3",
+  "envelope_ref": "5af44e1d-e597-4ddd-bda3-2ff29166f977",
   "baseline_ref": "car-aero-v7.3",
   "deltas": [
     {
@@ -259,7 +259,7 @@ Results bundle (one or more runs) with metrics, uncertainties, violations, and e
 
 ```json
 {
-  "proposal_id": "prop-2025-09-06-001",
+  "proposal_id": "668f34e6-9d48-46a9-8e06-11ec6e33d9f3",
   "runs": [
     {
       "delta_name": "rear-fairing-extension",
@@ -292,8 +292,8 @@ Decision record with accepted/rejected deltas, justification, dual sign-off, and
 
 ```json
 {
-  "decision_id": "dec-2025-09-06-a",
-  "envelope_ref": "task-2025-09-06-001",
+  "decision_id": "b5bb484a-577c-4ea3-8dd2-4508ecc73e9a",
+  "envelope_ref": "5af44e1d-e597-4ddd-bda3-2ff29166f977",
   "accepted_deltas": ["rear-fairing-extension"],
   "rejected_deltas": [],
   "justification": "Drag −1.35% within constraints; risk acceptable.",
@@ -317,7 +317,7 @@ Gate policy defining pass/block rules.
 
 ```json
 {
-  "policy_id": "gate-policy-1.0",
+  "policy_id": "2486101f-e2ae-4198-9a38-d9df73fe4c89",
   "must_pass": [
     "metrics.drag_pct <= -1.0",
     "metrics.mass_pct <= 0.5",

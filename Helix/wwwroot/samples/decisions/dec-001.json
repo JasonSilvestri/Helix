@@ -1,6 +1,6 @@
 {
-  "decision_id": "dec-2025-09-06-a",
-  "envelope_ref": "task-2025-09-06-001",
+  "decision_id": "b5bb484a-577c-4ea3-8dd2-4508ecc73e9a",
+  "envelope_ref": "5af44e1d-e597-4ddd-bda3-2ff29166f977",
   "accepted_deltas": [ "rear-fairing-extension" ],
   "rejected_deltas": [],
   "justification": "Drag −1.35% within constraints; risk acceptable.",

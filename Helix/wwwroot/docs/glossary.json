@@ -1,10 +1,15 @@
 {
-  "exclude": [
-    "**/bin",
-    "**/bower_components",
-    "**/jspm_packages",
-    "**/node_modules",
-    "**/obj",
-    "**/platforms"
-  ]
+  "canonical": {
+    "task_envelope": [ "task envelope" ],
+    "partner_l": [ "partner-l", "language partner", "llm partner" ],
+    "partner_q": [ "partner-q", "quant partner", "verification engine" ],
+    "gate_policy": [ "gate policy", "promotion policy" ],
+    "decision": [ "decision", "promotion record", "sign-off record" ],
+    "document_management": [ "document management", "dm" ]
+  },
+  "disallow": {
+    "doc shepherding": "document_management",
+    "idea arbiter": "partner_l",
+    "numeric oracle": "partner_q"
+  }
 }

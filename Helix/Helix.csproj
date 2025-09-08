@@ -4,6 +4,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
     <Title>Helix{} – A Universal AI Design Pattern for Dual-Partner Incremental Redesign</Title>
     <Description>Helix{} – A Universal AI Design Pattern for Dual-Partner Incremental Redesign (v1)</Description>
     <Copyright>Copyright © 2025 Helix{} — All Rights Reserved by Jason Silvestri &amp; Mark Silvestri</Copyright>
@@ -24,7 +25,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\assets\css\js\README.md\" />
+    <Folder Include="wwwroot\assets\js\README.md\" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <!-- Static web assets live under wwwroot by default -->
+    <Content Include="wwwroot\**\*.*" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+  
 </Project>

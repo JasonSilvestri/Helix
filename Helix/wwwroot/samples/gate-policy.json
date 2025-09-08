@@ -1,5 +1,5 @@
 {
-  "policy_id": "gate-policy-1.0",
+  "policy_id": "2486101f-e2ae-4198-9a38-d9df73fe4c89",
   "must_pass": [
     "metrics.drag_pct <= -1.0",
     "metrics.mass_pct <= 0.5",
