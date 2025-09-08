@@ -1,0 +1,27 @@
+{
+  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/results.schema.json",
+  "type": "object",
+  "required": [ "proposal_id", "runs", "summary" ],
+  "properties": {
+    "proposal_id": { "type": "string" },
+    "runs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [ "delta_name", "metrics", "uncertainty", "violations", "env" ],
+        "properties": {
+          "delta_name": { "type": "string" },
+          "metrics": { "type": "object" },
+          "uncertainty": { "type": "object" },
+          "violations": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "env": { "type": "object" }
+        }
+      }
+    },
+    "summary": { "type": "object" },
+    "bundle_hash": { "type": "string" }
+  }
+}

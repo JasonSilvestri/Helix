@@ -1,0 +1,31 @@
+{
+  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/decision.schema.json",
+  "type": "object",
+  "required": [ "decision_id", "envelope_ref", "accepted_deltas", "rejected_deltas", "justification", "signoff" ],
+  "properties": {
+    "decision_id": { "type": "string" },
+    "envelope_ref": { "type": "string" },
+    "accepted_deltas": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "rejected_deltas": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "justification": { "type": "string" },
+    "signoff": {
+      "type": "object",
+      "required": [ "quant_ok", "human", "timestamp" ],
+      "properties": {
+        "quant_ok": { "type": "boolean" },
+        "human": { "type": "string" },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "promoted_baseline": { "type": "string" }
+  }
+}

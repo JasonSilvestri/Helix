@@ -1,0 +1,28 @@
+{
+  "proposal_id": "prop-2025-09-06-001",
+  "envelope_ref": "task-2025-09-06-001",
+  "baseline_ref": "car-aero-v7.3",
+  "deltas": [
+    {
+      "name": "rear-fairing-extension",
+      "component": "rear_fairing",
+      "param_changes": {
+        "length_mm": {
+          "delta": 12,
+          "bounds": [ 0, 20 ]
+        }
+      },
+      "expected_effects": {
+        "drag_pct": -1.2,
+        "mass_pct": 0.1
+      },
+      "risks": [ "cooling recirculation increase" ],
+      "assumptions": [ "manufacturing tolerance ±0.5mm" ]
+    }
+  ],
+  "doe_plan": {
+    "strategy": "latin_hypercube",
+    "samples": 24
+  },
+  "rationale": "Targeting wake reduction with minimal mass impact."
+}

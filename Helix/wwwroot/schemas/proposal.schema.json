@@ -1,0 +1,33 @@
+{
+  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/proposal.schema.json",
+  "type": "object",
+  "required": [ "proposal_id", "envelope_ref", "baseline_ref", "deltas", "doe_plan", "rationale" ],
+  "properties": {
+    "proposal_id": { "type": "string" },
+    "envelope_ref": { "type": "string" },
+    "baseline_ref": { "type": "string" },
+    "deltas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [ "name", "component", "param_changes", "expected_effects" ],
+        "properties": {
+          "name": { "type": "string" },
+          "component": { "type": "string" },
+          "param_changes": { "type": "object" },
+          "expected_effects": { "type": "object" },
+          "risks": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "assumptions": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "doe_plan": { "type": "object" },
+    "rationale": { "type": "string" }
+  }
+}

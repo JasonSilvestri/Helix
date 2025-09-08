@@ -1,0 +1,22 @@
+{
+  "name": "helix-hub",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "validate": "node dist/index.js validate --root ../sample",
+    "gate": "node dist/index.js gate --root ../sample",
+    "manifest": "node dist/index.js manifest --root ../sample"
+  },
+  "dependencies": {
+    "ajv": "8.17.1",
+    "ajv-formats": "3.0.1",
+    "yargs": "17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.30",
+    "typescript": "5.4.5"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "decision_id": "dec-2025-09-06-a",
+  "envelope_ref": "task-2025-09-06-001",
+  "accepted_deltas": [ "rear-fairing-extension" ],
+  "rejected_deltas": [],
+  "justification": "Drag −1.35% within constraints; risk acceptable.",
+  "signoff": {
+    "quant_ok": true,
+    "human": "therealjasonsilvestri@gmail.com",
+    "timestamp": "2025-09-06T22:15:03Z"
+  },
+  "promoted_baseline": "car-aero-v7.4"
+}

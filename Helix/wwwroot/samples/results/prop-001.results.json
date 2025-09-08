@@ -1,0 +1,29 @@
+{
+  "proposal_id": "prop-2025-09-06-001",
+  "runs": [
+    {
+      "delta_name": "rear-fairing-extension",
+      "metrics": {
+        "drag_pct": -1.35,
+        "mass_pct": 0.08,
+        "cooling_margin": 1.11
+      },
+      "uncertainty": {
+        "drag_pct_ci95": 0.25,
+        "mass_pct_ci95": 0.03
+      },
+      "violations": [],
+      "env": {
+        "solver": "cfd-rans v5.4",
+        "mesh_hash": "sha256-MESH",
+        "container_digest": "ghcr.io/org/cfd@sha256:deadbeef",
+        "runtime_minutes": 47
+      }
+    }
+  ],
+  "summary": {
+    "pareto_front": [ "rear-fairing-extension" ],
+    "recommendation": [ "rear-fairing-extension" ]
+  },
+  "bundle_hash": "sha256-RESULTS-BUNDLE"
+}

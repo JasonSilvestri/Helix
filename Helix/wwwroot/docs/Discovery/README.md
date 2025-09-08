@@ -7,6 +7,13 @@
 
 ---
 
+```bash
+# For The Cool Kids: Clone Helix{} Git Repository
+$ git clone https://github.com/JasonSilvestri/Helix.git
+```
+
+---
+
 [`Home`](../../README.md) » [`Helix{}™ Official Documentation`](../../README.md)
 
 ---
@@ -23,14 +30,15 @@
 1. [Overview](#overview)
 2. [Prerequisites](#prerequisites)
 3. [Platform Scope (v1)](#platform-scope-v1)
-4. [Helix\{\} Repository File Structure (v1)](#helix-repository-file-structure-v1)
-5. [North-Star Principles (non-negotiables)](#north-star-principles-non-negotiables)
-6. [An Incremental Redesign Environment](#an-incremental-redesign-environment)
-7. [Could Current LLMs Apply to That Premise?](#could-current-llms-apply-to-that-premise)
-8. [Is That Premise—Using LLMs plus Quant Modeling—Viable?](#is-that-premiseusing-llms-plus-quant-modelingviable)
-9. [A Nudge of Theorizing (Because It's Delicious)](#a-nudge-of-theorizing-because-its-delicious)
-10. [The Point?](#the-point)
-11. [Hybrid Pipeline: “Dual Partners” for Incremental Redesign](#hybrid-pipeline-dual-partners-for-incremental-redesign)
+4. [Clone Helix\{\} Git Repository](#clone-helix-git-repository)
+5. [Helix\{\} Repository File Structure (v1)](#helix-repository-file-structure-v1)
+6. [North-Star Principles (non-negotiables)](#north-star-principles-non-negotiables)
+7. [An Incremental Redesign Environment](#an-incremental-redesign-environment)
+8. [Could Current LLMs Apply to That Premise?](#could-current-llms-apply-to-that-premise)
+9. [Is That Premise—Using LLMs plus Quant Modeling—Viable?](#is-that-premiseusing-llms-plus-quant-modelingviable)
+10. [A Nudge of Theorizing (Because It's Delicious)](#a-nudge-of-theorizing-because-its-delicious)
+11. [The Point?](#the-point)
+12. [Hybrid Pipeline: “Dual Partners” for Incremental Redesign](#hybrid-pipeline-dual-partners-for-incremental-redesign)
     1. [Core Idea](#1-core-idea)
     2. [System Roles & Guardrails](#2-system-roles--guardrails)
     3. [High-Level Loop (Incremental Redesign Cycle)](#3-high-level-loop-incremental-redesign-cycle)
@@ -40,7 +48,7 @@
     7. [Example Micro-Cycle (Automotive Aero)](#7-example-micro-cycle-automotive-aero)
     8. [Tooling Slots (pick what fits your stack)](#8-tooling-slots-pick-what-fits-your-stack)
     9. [Why This Honors the 1992 Premise](#9-why-this-honors-the-1992-premise)
-12. [PaLM\{\} Autonomy](#palm-autonomy)
+13. [PaLM\{\} Autonomy](#palm-autonomy)
     1. [Workflow States](#workflow-states)
     2. [Junction Rules (Enforced)](#junction-rules-enforced)
     3. [Model Objects](#model-objects)
@@ -49,12 +57,12 @@
     6. [Failure-Mode Hardening (edge cases you’ll actually hit)](#failure-mode-hardening-edge-cases-youll-actually-hit)
     7. [Cold-Start Protocol (so AI “recognizes” the approach instantly)](#cold-start-protocol-so-ai-recognizes-the-approach-instantly)
     8. [Minimal JSON Schemas (placeholders we already enforce today)](#minimal-json-schemas-placeholders-we-already-enforce-today)
-13. [How this improves AI interaction with ChatGPT User (the “AI-friend” angle)](#how-this-improves-ai-interaction-with-chatgpt-user-the-ai-friend-angle)
-14. [A Helix\{\}™ for Existing Projects & Repositories](#a-helix-for-existing-projects--repositories)
-15. [Migration Stance (brutally clear)](#migration-stance-brutally-clear)
-16. [Next Steps](#next-steps)
-17. [Windows 10 Constraints](#windows-10-constraints)
-18. [Expanding Lifecycles of a Helix\{\}](#expanding-lifecycles-of-a-helix)
+14. [How this improves AI interaction with ChatGPT User (the “AI-friend” angle)](#how-this-improves-ai-interaction-with-chatgpt-user-the-ai-friend-angle)
+15. [A Helix\{\}™ for Existing Projects & Repositories](#a-helix-for-existing-projects--repositories)
+16. [Migration Stance (brutally clear)](#migration-stance-brutally-clear)
+17. [Next Steps](#next-steps)
+18. [Windows 10 Constraints](#windows-10-constraints)
+19. [Expanding Lifecycles of a Helix\{\}](#expanding-lifecycles-of-a-helix)
 
 ---
 
@@ -233,8 +241,8 @@ During discovery, one potential drift was clarified: **dual-partner discipline �
 {
   "identities": {
     "humans": [
-      { "id": "mark", "display": "Mark Silvestri", "email": "mark@org", "roles": ["human_signer"] },
-      { "id": "jason", "display": "Jason Silvestri", "email": "jason@org", "roles": ["owner","human_signer"] }
+      { "id": "mark", "display": "Mark Silvestri", "email": "marks@gmail.com", "roles": ["human_signer"] },
+      { "id": "jason", "display": "Jason Silvestri", "email": "therealjasonsilvestri@gmail.com", "roles": ["owner","human_signer"] }
     ],
     "services": [
       { "id": "svc-cfd", "display": "CFD Runner", "roles": ["partner_q"] },
@@ -332,7 +340,7 @@ This ensures clarity: **partners stay invariant roles, while humans and services
   "baseline_ref": "car-aero-v7.3",
   "accepted_deltas": ["rear-fairing-extension"],
   "justification": "Drag −1.35% within constraints; risk acceptable.",
-  "signoff": { "quant_ok": true, "human": "LeadDesigner@org", "timestamp": "2025-09-06T22:15:03Z" },
+  "signoff": { "quant_ok": true, "human": "therealjasonsilvestri@gmail.com", "timestamp": "2025-09-06T22:15:03Z" },
   "new_baseline": "car-aero-v7.4"
 }
 ```
@@ -677,7 +685,7 @@ Decision records capture accepted/rejected deltas, justification, and dual sign-
   "justification": "Drag −1.35% within constraints; risk acceptable.",
   "signoff": {
     "quant_ok": true,
-    "human": "LeadDesigner@org",
+    "human": "therealjasonsilvestri@gmail.com",
     "timestamp": "2025-09-06T22:15:03Z"
   },
   "promoted_baseline": "car-aero-v7.4"
@@ -771,7 +779,7 @@ Proposal includes deltas, expected effects, risks, and a structured DOE plan.
 
 ```json
 {
-  "$id": "https://schemas.helix.dev/proposal.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/proposal.schema.json",
   "type": "object",
   "required": ["proposal_id", "envelope_ref", "baseline_ref", "deltas", "doe_plan", "rationale"],
   "properties": {
@@ -805,7 +813,7 @@ Results include scored metrics, uncertainty, violations, and environment details
 
 ```json
 {
-  "$id": "https://schemas.helix.dev/results.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/results.schema.json",
   "type": "object",
   "required": ["proposal_id", "runs", "summary"],
   "properties": {
@@ -836,7 +844,7 @@ Decision records capture accepted/rejected deltas, justification, and dual sign-
 
 ```json
 {
-  "$id": "https://schemas.helix.dev/decision.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/decision.schema.json",
   "type": "object",
   "required": ["decision_id", "envelope_ref", "accepted_deltas", "rejected_deltas", "justification", "signoff"],
   "properties": {
@@ -1395,7 +1403,7 @@ export class GateCheck {
   "justification": "Drag −1.35% within constraints; risk acceptable.",
   "signoff": {
     "quant_ok": true,
-    "human": "LeadDesigner@org",
+    "human": "therealjasonsilvestri@gmail.com",
     "timestamp": "2025-09-06T22:15:03Z"
   },
   "promoted_baseline": "car-aero-v7.4"

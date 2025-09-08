@@ -7,6 +7,13 @@
 
 ---
 
+```bash
+# For The Cool Kids: Clone Helix{} Git Repository
+$ git clone https://github.com/JasonSilvestri/Helix.git
+```
+
+---
+
 [`Home`](./README.md) » [`Helix{}™ Discovery`](./docs/Discovery/README.md)
 
 ---
@@ -49,16 +56,136 @@ The **Helix\{\}™**, requires **nothing** but your ChatGPT AI Text Prompt to ex
 
 Conversely, before you can get started using the **Helix\{\}™** in the ways we outline in all examples, you need to ensure you have the following prerequisites installed and configured on your system:
 
-- [Visual Studio (v 17.14.8)](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Technologies/#visual-studio)
+- [Visual Studio (v 17.14.13)](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Technologies/#visual-studio)
 - [.NET Framework (v 9.0.1)](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Technologies/#net-framework)
 - [ASP.NET Core (v 9.0.1)](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Technologies/#aspnet-core)
 - [Node.js (v 20.14.0)](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Technologies/#node)
 - [npm (v 10.8.1)](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Technologies/#npm)
 - [Python (v 3.12.3)](https://github.com/JasonSilvestri/JSopX.BridgeTooFar/tree/master/JSopX.BridgeTooFar/DocsOpenX/Technologies/#python)
 
+---
+
+## Clone Helix\{\} Git Repository
+
+_You can Clone_ the `Helix` GitHub Repository in serveral ways.
+
+**Choose the approach below that fits your environment**:  
+
+1. **[Bash](#option-1-using-bash)** → Ideal for **Linux, macOS, and Windows (WSL/Git Bash)** users.  
+2. **[PowerShell](#option-2-using-powershell)** → Best for **Windows** users.  
+3. **[Node.js](#option-3-using-node-or-npm-degit)** → A lightweight option for developers using **JavaScript-based workflows**.  
+
+---
+
+### **Option 1: Using `Bash`:**
+ 
+```bash
+
+ # Using Bash: Clone Helix Git Repository
+
+ # 1. Navigate to the desired local directory where you plan to clone the repository
+ cd path\to\local\repo\JasonSilvestri\Helix
+
+ # 2. Clone Helix Git Repository       
+ git clone https://github.com/JasonSilvestri/Helix.git
+    
+```
+
+[`Back to Top`](#clone-helix-git-repository)
+
+---
+
+### **Option 2: Using `Powershell`:**
+
+```powershell
+
+ # Using PowerShell: Clone Helix Git Repository
+
+ # 1. Navigate to the desired local directory where you plan to clone the repository
+ cd path\to\local\repo\JasonSilvestri\Helix
+
+ # 2. Clone Helix Git Repository       
+ git clone https://github.com/JasonSilvestri/Helix.git
+
+```
+
+[`Back to Top`](#clone-helix-git-repository)
+
+---
+
+### **Option 3: Using `Node` or `npm` (degit):**
+ 
+```shell
+
+ # Using Node.js / npm : Clone Helix Git Repository
+ # 1. Navigate to the desired local directory where you plan to clone the repository
+ cd path\to\local\repo\JasonSilvestri\Helix
+    
+ # 2. Using npx degit to clone without .git history
+ npx degit https://github.com/JasonSilvestri/Helix
+
+```
+
+[`Back to Top`](#clone-helix-git-repository)
+
+---
+
+### **Open the Visual Studio Solution**
+
+Working with the `Helix` Project in Visual Studio is simple enough.
+
+1. Launch **Visual Studio (v 17.14.13)**.
+2. Open the solution file: `Helix.sln`.
+
+[`Back to Top`](#table-of-contents)
+
+---
+
+## **Configure the Project**
+
+> [!TIP]
+>
+> Latest versions of [Visual Studio](https://github.com/JasonSilvestri/Helix/tree/master/Helix/DocsOpenX/Technologies/#visual-studio) performs this step regularly, dropping and restoring project dependencies, nuget packages and other resources between builds automatically (*by design*). Still, it is good practice to at least be aware of the commands outlined in this step.
+> 
+
+---
+
+### **Ensure Dependencies Are Restored:**
+
+Ensure `Helix` Project dependencies are restored:
+
+```bash
+ npm install
+```
+
+[`Back to Top`](#table-of-contents)
+
+---
+
+### **Verify Nuget Packages:**
+
+Verify that all NuGet packages are up to date:
+
+```bash
+ dotnet restore
+```
+   
+[`Back to Top`](#table-of-contents)
+
+---
+
+## **Be Sure to Build and Run**
+
+Building and Running the `Helix` Project in Visual Studio is also another simple task.
+
+1. Build the solution in [Visual Studio](https://github.com/JasonSilvestri/Helix/tree/master/Helix/DocsOpenX/OpenProjects/jsopx.BridgeTooFar/p1/v1/Technologies/#visual-studio).
+2. Run the project:
+   - Use the **IIS Express** profile for local development.
+
 [`⇧ Back to Top`](#table-of-contents)  
 
 ---
+
 
 ## Platform Scope (v1)
 
@@ -300,7 +427,7 @@ Decision record with accepted/rejected deltas, justification, dual sign-off, and
   "justification": "Drag −1.35% within constraints; risk acceptable.",
   "signoff": {
     "quant_ok": true,
-    "human": "LeadDesigner@org",
+    "human": "therealjasonsilvestri@gmail.com",
     "timestamp": "2025-09-06T22:15:03Z"
   },
   "promoted_baseline": "car-aero-v7.4"
@@ -369,50 +496,6 @@ Still, you to be prepared to either build out a repository as you and your favor
 You should be able to clone this repository no problem, and get the samples we have created for you. 
 
 If for some reason you can't clone this repository, you can always create your own repository and copy the files from here. At a mimimum, you should get familar with the files ChatGPT may serve you automatically when/if it knows you seeded a Helix\{\}™.
-
----
-
-Awesome. I’ve locked v1 as **ChatGPT-native (with Lumina)**, added an explicit **Platform Scope** in both READMEs, and scaffolded a clean starter repo with all core files ready to paste. Everything below is complete text—no ellipses, no TODOs.
-
----
-
-# 🗂️ Repository layout
-
-```
-helix/
-├─ README.md
-├─ LICENSE
-├─ CONTRIBUTING.md
-├─ CODE_OF_CONDUCT.md
-├─ SECURITY.md
-├─ .gitignore
-├─ schemas/
-│  ├─ envelope.schema.json
-│  ├─ proposal.schema.json
-│  ├─ results.schema.json
-│  ├─ decision.schema.json
-│  └─ gate-policy.schema.json
-├─ sample/
-│  ├─ envelope.json
-│  ├─ gate-policy.json
-│  ├─ proposals/
-│  │  └─ prop-001.json
-│  ├─ results/
-│  │  └─ prop-001.results.json
-│  └─ decisions/
-│     └─ dec-001.json
-├─ docs/
-│  └─ Discovery/
-│     └─ README.md
-└─ helix-hub/
-   ├─ package.json
-   ├─ tsconfig.json
-   └─ src/
-      ├─ index.ts
-      └─ lib/
-         ├─ schema.ts
-         └─ util.ts
-```
 
 ---
 
@@ -597,7 +680,7 @@ Helix{} v1 is **ChatGPT-native by design**, authored and proven in collaboration
   "justification": "Drag −1.35% within constraints; risk acceptable.",
   "signoff": {
     "quant_ok": true,
-    "human": "LeadDesigner@org",
+    "human": "therealjasonsilvestri@gmail.com",
     "timestamp": "2025-09-06T22:15:03Z"
   },
   "promoted_baseline": "car-aero-v7.4"
@@ -819,7 +902,7 @@ Helix{} v1 is **ChatGPT-native** by intent. We prove rigor here first, then cons
   "baseline_ref": "car-aero-v7.3",
   "accepted_deltas": ["rear-fairing-extension"],
   "justification": "Drag −1.35% within constraints; risk acceptable.",
-  "signoff": { "quant_ok": true, "human": "LeadDesigner@org", "timestamp": "2025-09-06T22:15:03Z" },
+  "signoff": { "quant_ok": true, "human": "therealjasonsilvestri@gmail.com", "timestamp": "2025-09-06T22:15:03Z" },
   "new_baseline": "car-aero-v7.4"
 }
 ```
@@ -1043,14 +1126,43 @@ manifest.json
 
 ---
 
-
 ## 📁 `schemas/*.json`
 
-**envelope.schema.json**
+
+The following are the JSON schema files that define the structure and validation rules for the Helix\{\} contracts. Each schema is self-contained and can be used to validate corresponding JSON documents. 
+
+---
+
+### 📄 **envelope.schema.json**:
+
+The `Task Envelope` is the universal spine that carries context, baseline, policies, partners, and arrays of proposals, results, and decisions.
+
+| Key           | Description                                                                                   |
+|:---------------|:-----------------------------------------------------------------------------------------------|
+| `envelope_id`   | Unique identifier for the task envelope                                                       |
+| `created_at`    | Timestamp when the envelope was created (ISO 8601 format)                                     |
+| `owner`         | Owner or creator of the envelope                                                              |
+| `context`       | Object containing domain, goal, constraints, and success metrics for the task                 |
+| `baseline`      | Object describing the baseline design, including IDs, hashes, and artifact URIs               |
+| `policies`      | Object specifying gate policy, LLM model policy, quant requirements, and dual signoff flags   |
+| `partners`      | Object listing Partner-L (Language) and Partner-Q (Quantitative) with schema versions         |
+| `proposals`     | Array of proposal objects associated with the envelope                                        |
+| `results`       | Array of results objects associated with the envelope                                         |
+| `decisions`     | Array of decision objects associated with the envelope                                        |
+| `provenance`    | Object containing hashes and orchestrator version for reproducibility and traceability        |
+
+
+[`⇧ Back to Top`](#table-of-contents)
+
+---
+
+#### 📄 **envelope.schema.json**:
+
+The following JSON schema defines the structure and validation rules for the Task Envelope.
 
 ```json
 {
-  "$id": "https://schemas.helix.dev/envelope.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/envelope.schema.json",
   "type": "object",
   "required": ["envelope_id","created_at","owner","context","baseline","policies","partners"],
   "properties": {
@@ -1078,15 +1190,15 @@ manifest.json
 }
 ```
 
-**proposal.schema.json**
-
 [`⇧ Back to Top`](#table-of-contents)
 
 ---
 
+#### 📄 **proposal.schema.json**
+
 ```json
 {
-  "$id": "https://schemas.helix.dev/proposal.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/proposal.schema.json",
   "type": "object",
   "required": ["proposal_id","envelope_ref","baseline_ref","deltas","doe_plan","rationale"],
   "properties": {
@@ -1114,15 +1226,16 @@ manifest.json
 }
 ```
 
+
 [`⇧ Back to Top`](#table-of-contents)
 
 ---
 
-**results.schema.json**
+#### 📄 **results.schema.json**
 
 ```json
 {
-  "$id": "https://schemas.helix.dev/results.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/results.schema.json",
   "type": "object",
   "required": ["proposal_id","runs","summary"],
   "properties": {
@@ -1147,15 +1260,16 @@ manifest.json
 }
 ```
 
+
 [`⇧ Back to Top`](#table-of-contents)
 
 ---
 
-**decision.schema.json**
+#### 📄 **decision.schema.json**
 
 ```json
 {
-  "$id": "https://schemas.helix.dev/decision.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/decision.schema.json",
   "type": "object",
   "required": ["decision_id","envelope_ref","accepted_deltas","rejected_deltas","justification","signoff"],
   "properties": {
@@ -1178,15 +1292,16 @@ manifest.json
 }
 ```
 
+
 [`⇧ Back to Top`](#table-of-contents)
 
 ---
 
-**gate-policy.schema.json**
+#### 📄 **gate-policy.schema.json**
 
 ```json
 {
-  "$id": "https://schemas.helix.dev/gate-policy.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/gate-policy.schema.json",
   "type": "object",
   "required": ["policy_id","must_pass"],
   "properties": {
@@ -1198,15 +1313,18 @@ manifest.json
 }
 ```
 
----
-
-## 📁 `sample/` JSONs
-
-**envelope.json**
 
 [`⇧ Back to Top`](#table-of-contents)
 
 ---
+
+## 📁 `sample/` JSONs
+
+These samples directly correspond to the schemas shown above.
+
+---
+
+#### 📄 **envelope.json**
 
 ```json
 {
@@ -1252,11 +1370,12 @@ manifest.json
 }
 ```
 
+
 [`⇧ Back to Top`](#table-of-contents)
 
 ---
 
-**gate-policy.json**
+#### 📄 **gate-policy.json**
 
 ```json
 {
@@ -1271,11 +1390,14 @@ manifest.json
 }
 ```
 
+
 [`⇧ Back to Top`](#table-of-contents)
 
 ---
 
-**proposals/prop-001.json**
+#### 📄 **proposals/prop-001.json**
+
+res
 
 ```json
 {
@@ -1297,11 +1419,12 @@ manifest.json
 }
 ```
 
+
 [`⇧ Back to Top`](#table-of-contents)
 
 ---
 
-**results/prop-001.results.json**
+#### 📄 **results/prop-001.results.json**
 
 ```json
 {
@@ -1328,11 +1451,12 @@ manifest.json
 }
 ```
 
+
 [`⇧ Back to Top`](#table-of-contents)
 
 ---
 
-**decisions/dec-001.json**
+#### 📄 **decisions/dec-001.json**
 
 ```json
 {
@@ -1343,22 +1467,22 @@ manifest.json
   "justification": "Drag −1.35% within constraints; risk acceptable.",
   "signoff": {
     "quant_ok": true,
-    "human": "LeadDesigner@org",
+    "human": "therealjasonsilvestri@gmail.com",
     "timestamp": "2025-09-06T22:15:03Z"
   },
   "promoted_baseline": "car-aero-v7.4"
 }
 ```
 
-
 [`⇧ Back to Top`](#table-of-contents)
 
 ---
 
-
 ## 📁 `helix-hub/` (reference orchestrator)
 
-**package.json**
+These files implement a tiny Node 20 reference orchestrator that validates contracts, evaluates gates, and emits a manifest.
+
+#### 📄 **package.json**
 
 ```json
 {
@@ -1385,11 +1509,12 @@ manifest.json
 }
 ```
 
+
 [`⇧ Back to Top`](#table-of-contents)
 
 ---
 
-**tsconfig.json**
+#### 📄 **tsconfig.json**
 
 ```json
 {
@@ -1411,7 +1536,7 @@ manifest.json
 
 ---
 
-**src/index.ts**
+#### 📄 **src/index.ts**
 
 ```ts
 import { hideBin } from 'yargs/helpers';
@@ -1507,6 +1632,8 @@ await yargs(hideBin(process.argv))
 
 ---
 
+#### 📄 **src/lib/util.ts**
+
 ```ts
 import { readdir } from 'node:fs/promises';
 import { join } from 'node:path';
@@ -1531,11 +1658,12 @@ export async function listKnownFiles(root: string) {
 }
 ```
 
+
 [`⇧ Back to Top`](#table-of-contents)
 
 ---
 
-**src/lib/schema.ts**
+#### 📄 **src/lib/schema.ts**
 
 ```ts
 import Ajv from 'ajv';
@@ -1829,7 +1957,7 @@ app.Run();
 
 > Use the **Root README** content we finalized (the “clean spec”), including the **Identities** and **AuthZ** sections and the **Glossary Guardrails** reference.
 
-[`⇧ Back to Top`](#table-of-contents)  
+[`⇧ Back to Top`](#table-of-contents)
 
 ---
 
@@ -1837,7 +1965,7 @@ app.Run();
 
 > Use the **Discovery README** we finalized (history + “early guardrails”), now including Identities/AuthZ and the glossary note.
 
-[`⇧ Back to Top`](#table-of-contents)  
+[`⇧ Back to Top`](#table-of-contents)
 
 ---
 

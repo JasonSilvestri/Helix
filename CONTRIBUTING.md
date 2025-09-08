@@ -299,7 +299,7 @@ Decision record with accepted/rejected deltas, justification, dual sign-off, and
   "justification": "Drag −1.35% within constraints; risk acceptable.",
   "signoff": {
     "quant_ok": true,
-    "human": "LeadDesigner@org",
+    "human": "therealjasonsilvestri@gmail.com",
     "timestamp": "2025-09-06T22:15:03Z"
   },
   "promoted_baseline": "car-aero-v7.4"

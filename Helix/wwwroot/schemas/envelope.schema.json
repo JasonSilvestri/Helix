@@ -1,0 +1,36 @@
+{
+  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/envelope.schema.json",
+  "type": "object",
+  "required": [ "envelope_id", "created_at", "owner", "context", "baseline", "policies", "partners" ],
+  "properties": {
+    "envelope_id": { "type": "string" },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "owner": { "type": "string" },
+    "context": {
+      "type": "object",
+      "required": [ "goal", "constraints", "success_metrics" ],
+      "properties": {
+        "domain": { "type": "string" },
+        "goal": { "type": "string" },
+        "constraints": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "success_metrics": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "baseline": { "type": "object" },
+    "policies": { "type": "object" },
+    "partners": { "type": "object" },
+    "proposals": { "type": "array" },
+    "results": { "type": "array" },
+    "decisions": { "type": "array" },
+    "provenance": { "type": "object" }
+  }
+}

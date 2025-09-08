@@ -1,0 +1,10 @@
+{
+  "policy_id": "gate-policy-1.0",
+  "must_pass": [
+    "metrics.drag_pct <= -1.0",
+    "metrics.mass_pct <= 0.5",
+    "metrics.cooling_margin >= 1.1"
+  ],
+  "blocked_if": [ "violations.length > 0" ],
+  "confidence_rules": [ "uncertainty.drag_pct_ci95 <= 0.4" ]
+}

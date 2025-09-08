@@ -1,0 +1,20 @@
+{
+  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/gate-policy.schema.json",
+  "type": "object",
+  "required": [ "policy_id", "must_pass" ],
+  "properties": {
+    "policy_id": { "type": "string" },
+    "must_pass": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "blocked_if": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "confidence_rules": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}
