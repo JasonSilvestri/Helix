@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/gate-policy.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/blob/master/Helix/wwwroot/schemas/gate-policy.schema.json",
   "type": "object",
   "required": [ "policy_id", "must_pass" ],
   "properties": {

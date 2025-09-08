@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/envelope.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/blob/master/Helix/wwwroot/schemas/envelope.schema.json",
   "type": "object",
   "required": [ "envelope_id", "created_at", "owner", "context", "baseline", "policies", "partners" ],
   "properties": {

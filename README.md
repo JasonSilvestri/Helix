@@ -145,7 +145,7 @@ Working with the `Helix` Project in Visual Studio is simple enough.
 
 > [!TIP]
 >
-> Latest versions of [Visual Studio](https://github.com/JasonSilvestri/Helix/tree/master/Helix/DocsOpenX/Technologies/#visual-studio) performs this step regularly, dropping and restoring project dependencies, nuget packages and other resources between builds automatically (*by design*). Still, it is good practice to at least be aware of the commands outlined in this step.
+> Latest versions of [Visual Studio](https://github.com/JasonSilvestri/Helix/blob/master/Helix/wwwroot/DocsOpenX/Technologies/#visual-studio) performs this step regularly, dropping and restoring project dependencies, nuget packages and other resources between builds automatically (*by design*). Still, it is good practice to at least be aware of the commands outlined in this step.
 > 
 
 ---
@@ -178,7 +178,7 @@ Verify that all NuGet packages are up to date:
 
 Building and Running the `Helix` Project in Visual Studio is also another simple task.
 
-1. Build the solution in [Visual Studio](https://github.com/JasonSilvestri/Helix/tree/master/Helix/DocsOpenX/OpenProjects/jsopx.BridgeTooFar/p1/v1/Technologies/#visual-studio).
+1. Build the solution in [Visual Studio](https://github.com/JasonSilvestri/Helix/blob/master/Helix/wwwroot/DocsOpenX/OpenProjects/jsopx.BridgeTooFar/p1/v1/Technologies/#visual-studio).
 2. Run the project:
    - Use the **IIS Express** profile for local development.
 
@@ -1162,7 +1162,7 @@ The following JSON schema defines the structure and validation rules for the Tas
 
 ```json
 {
-  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/envelope.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/blob/master/Helix/wwwroot/schemas/envelope.schema.json",
   "type": "object",
   "required": ["envelope_id","created_at","owner","context","baseline","policies","partners"],
   "properties": {
@@ -1198,7 +1198,7 @@ The following JSON schema defines the structure and validation rules for the Tas
 
 ```json
 {
-  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/proposal.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/blob/master/Helix/wwwroot/schemas/proposal.schema.json",
   "type": "object",
   "required": ["proposal_id","envelope_ref","baseline_ref","deltas","doe_plan","rationale"],
   "properties": {
@@ -1235,7 +1235,7 @@ The following JSON schema defines the structure and validation rules for the Tas
 
 ```json
 {
-  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/results.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/blob/master/Helix/wwwroot/schemas/results.schema.json",
   "type": "object",
   "required": ["proposal_id","runs","summary"],
   "properties": {
@@ -1269,7 +1269,7 @@ The following JSON schema defines the structure and validation rules for the Tas
 
 ```json
 {
-  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/decision.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/blob/master/Helix/wwwroot/schemas/decision.schema.json",
   "type": "object",
   "required": ["decision_id","envelope_ref","accepted_deltas","rejected_deltas","justification","signoff"],
   "properties": {
@@ -1301,7 +1301,7 @@ The following JSON schema defines the structure and validation rules for the Tas
 
 ```json
 {
-  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/gate-policy.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/blob/master/Helix/wwwroot/schemas/gate-policy.schema.json",
   "type": "object",
   "required": ["policy_id","must_pass"],
   "properties": {

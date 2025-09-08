@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/results.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/blob/master/Helix/wwwroot/schemas/results.schema.json",
   "type": "object",
   "required": [ "proposal_id", "runs", "summary" ],
   "properties": {

@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/proposal.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/blob/master/Helix/wwwroot/schemas/proposal.schema.json",
   "type": "object",
   "required": [ "proposal_id", "envelope_ref", "baseline_ref", "deltas", "doe_plan", "rationale" ],
   "properties": {

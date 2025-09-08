@@ -779,7 +779,7 @@ Proposal includes deltas, expected effects, risks, and a structured DOE plan.
 
 ```json
 {
-  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/proposal.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/blob/master/Helix/wwwroot/schemas/proposal.schema.json",
   "type": "object",
   "required": ["proposal_id", "envelope_ref", "baseline_ref", "deltas", "doe_plan", "rationale"],
   "properties": {
@@ -813,7 +813,7 @@ Results include scored metrics, uncertainty, violations, and environment details
 
 ```json
 {
-  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/results.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/blob/master/Helix/wwwroot/schemas/results.schema.json",
   "type": "object",
   "required": ["proposal_id", "runs", "summary"],
   "properties": {
@@ -844,7 +844,7 @@ Decision records capture accepted/rejected deltas, justification, and dual sign-
 
 ```json
 {
-  "$id": "https://github.com/JasonSilvestri/Helix/tree/master/Helix/schemas/decision.schema.json",
+  "$id": "https://github.com/JasonSilvestri/Helix/blob/master/Helix/wwwroot/schemas/decision.schema.json",
   "type": "object",
   "required": ["decision_id", "envelope_ref", "accepted_deltas", "rejected_deltas", "justification", "signoff"],
   "properties": {
