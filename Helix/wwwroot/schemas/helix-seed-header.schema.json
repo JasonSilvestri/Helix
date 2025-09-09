@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://helix/schemas/helix-seed-header.schema.json",
+  "title": "Helix Seed Header",
+  "type": "object",
+  "required": [ "helix_seed_header" ],
+  "properties": {
+    "helix_seed_header": {
+      "type": "object",
+      "required": [ "version", "project", "capabilities", "preferred_outputs", "determinism" ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+(\\.[0-9]+)?$"
+        },
+        "project": {
+          "type": "string",
+          "minLength": 1
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "preferred_outputs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "determinism": {
+          "type": "object",
+          "required": [ "uuid_namespace", "hash" ],
+          "properties": {
+            "uuid_namespace": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "hash": {
+              "type": "string",
+              "enum": [ "sha256", "sha384", "sha512" ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "repo": {
+          "description": "Optional Git repository coordinates for rapid handoff once files exist.",
+          "type": "object",
+          "required": [ "url" ],
+          "properties": {
+            "provider": {
+              "type": "string",
+              "default": "github"
+            },
+            "owner": { "type": "string" },
+            "name": { "type": "string" },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "default_branch": {
+              "type": "string",
+              "default": "master"
+            },
+            "paths": {
+              "type": "object",
+              "description": "Common directories to keep tools in sync; purely advisory.",
+              "properties": {
+                "schemas": {
+                  "type": "string",
+                  "default": "schemas"
+                },
+                "samples": {
+                  "type": "string",
+                  "default": "sample"
+                },
+                "docs": {
+                  "type": "string",
+                  "default": "docs"
+                },
+                "tools": {
+                  "type": "string",
+                  "default": "tools"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "links": {
+          "description": "Optional backlinks to prior threads or external context.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [ "rel", "href" ],
+            "properties": {
+              "rel": {
+                "type": "string",
+                "minLength": 1
+              },
+              "href": {
+                "type": "string",
+                "format": "uri"
+              },
+              "notes": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "workflow_policy": {
+          "description": "Optional global workflow defaults. Concrete objects still carry their own state.",
+          "type": "object",
+          "properties": {
+            "allowed_states": {
+              "type": "array",
+              "items": { "$ref": "workflow-state.schema.json#/$defs/WorkflowState" },
+              "minItems": 1
+            },
+            "initial_state": { "$ref": "workflow-state.schema.json#/$defs/WorkflowState" },
+            "state_transitions": {
+              "description": "Optional adjacency list of allowed transitions per state.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": { "$ref": "workflow-state.schema.json#/$defs/WorkflowState" }
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
